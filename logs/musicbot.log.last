@@ -1,0 +1,49 @@
+[16.221046448] 2021-05-03 20:36:06,638 - INFO - launcher: Starting sanity checks
+[16.367197037] 2021-05-03 20:36:06,638 - INFO - launcher: Checking for Python 3.5+
+[16.433238983] 2021-05-03 20:36:06,638 - INFO - launcher: Checking console encoding
+[16.491174698] 2021-05-03 20:36:06,638 - INFO - launcher: Ensuring we're in the right environment
+[140.105962753] 2021-05-03 20:36:06,762 - INFO - launcher: Required checks passed.
+[140.232086182] 2021-05-03 20:36:06,762 - INFO - launcher: Optional checks passed.
+[140.301227570] 2021-05-03 20:36:06,762 - INFO - launcher: Moving old musicbot log
+
+######################### PRE-RUN SANITY CHECKS PASSED #########################
+
+[0.4797739982604980] 2021-05-03 20:36:07,102 - WARNING - musicbot.config | In config.py, line 116 in run_checks: i18n file does not exist. Trying to fallback to config/i18n/en.json.
+[0.4798982143402100] 2021-05-03 20:36:07,102 - INFO - musicbot.config | In config.py, line 127 in run_checks: Using i18n: config/i18n/en.json
+[0.4806289672851562] 2021-05-03 20:36:07,102 - DEBUG - musicbot.bot | In bot.py, line 220 in _setup_logging: Set logging level to INFO
+[0.4816210269927979] 2021-05-03 20:36:07,103 - DEBUG - musicbot.json_file | In json_file.py, line 8 in __init__: Init JSON obj with config/i18n/en.json
+[0.5013191699981689] 2021-05-03 20:36:07,123 - INFO - musicbot.bot | In bot.py, line 91 in __init__: Starting MusicBot 9871a7e
+[1.128104925] launcher-ERROR: Error starting bot
+Traceback (most recent call last):
+  File "run.py", line 373, in main
+    m.run()
+  File "/Users/zehuazhu/Documents/GitHub/Discord-Bilibili-Bot/musicbot/bot.py", line 790, in run
+    self.loop.run_until_complete(self.start(*self.config.auth))
+  File "/Users/zehuazhu/.pyenv/versions/3.7.10/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "/Users/zehuazhu/.pyenv/versions/venv-music-bot/lib/python3.7/site-packages/discord/client.py", line 543, in start
+    await self.connect(reconnect=reconnect)
+  File "/Users/zehuazhu/.pyenv/versions/venv-music-bot/lib/python3.7/site-packages/discord/client.py", line 457, in connect
+    await self._connect()
+  File "/Users/zehuazhu/.pyenv/versions/venv-music-bot/lib/python3.7/site-packages/discord/client.py", line 421, in _connect
+    await self.ws.poll_event()
+  File "/Users/zehuazhu/.pyenv/versions/venv-music-bot/lib/python3.7/site-packages/discord/gateway.py", line 469, in poll_event
+    await self.received_message(msg)
+  File "/Users/zehuazhu/.pyenv/versions/venv-music-bot/lib/python3.7/site-packages/discord/gateway.py", line 423, in received_message
+    func(data)
+  File "/Users/zehuazhu/.pyenv/versions/venv-music-bot/lib/python3.7/site-packages/discord/state.py", line 663, in parse_guild_create
+    guild = self._get_create_guild(data)
+  File "/Users/zehuazhu/.pyenv/versions/venv-music-bot/lib/python3.7/site-packages/discord/state.py", line 638, in _get_create_guild
+    guild._from_data(data)
+  File "/Users/zehuazhu/.pyenv/versions/venv-music-bot/lib/python3.7/site-packages/discord/guild.py", line 391, in _from_data
+    self._sync(guild)
+  File "/Users/zehuazhu/.pyenv/versions/venv-music-bot/lib/python3.7/site-packages/discord/guild.py", line 420, in _sync
+    self._add_channel(VoiceChannel(guild=self, data=c, state=self._state))
+  File "/Users/zehuazhu/.pyenv/versions/venv-music-bot/lib/python3.7/site-packages/discord/channel.py", line 504, in __init__
+    self._update(guild, data)
+  File "/Users/zehuazhu/.pyenv/versions/venv-music-bot/lib/python3.7/site-packages/discord/channel.py", line 535, in _update
+    self._fill_overwrites(data)
+  File "/Users/zehuazhu/.pyenv/versions/venv-music-bot/lib/python3.7/site-packages/discord/abc.py", line 271, in _fill_overwrites
+    self._overwrites.append(_Overwrites(id=overridden_id, **overridden))
+TypeError: __new__() got an unexpected keyword argument 'deny_new'
+[1.131217957] launcher-INFO: All done.
