@@ -1,0 +1,35 @@
+[16.089916229] 2021-05-03 21:27:31,615 - INFO - launcher: Starting sanity checks
+[16.238212585] 2021-05-03 21:27:31,615 - INFO - launcher: Checking for Python 3.5+
+[16.304969788] 2021-05-03 21:27:31,615 - INFO - launcher: Checking console encoding
+[16.367912292] 2021-05-03 21:27:31,615 - INFO - launcher: Ensuring we're in the right environment
+[136.254072189] 2021-05-03 21:27:31,735 - INFO - launcher: Required checks passed.
+[136.377811432] 2021-05-03 21:27:31,735 - INFO - launcher: Optional checks passed.
+
+######################### PRE-RUN SANITY CHECKS PASSED #########################
+
+[0.5094580650329590] 2021-05-03 21:27:32,108 - WARNING - musicbot.config | In config.py, line 116 in run_checks: i18n file does not exist. Trying to fallback to config/i18n/en.json.
+[0.5095911026000977] 2021-05-03 21:27:32,108 - INFO - musicbot.config | In config.py, line 127 in run_checks: Using i18n: config/i18n/en.json
+[0.5103409290313721] 2021-05-03 21:27:32,109 - DEBUG - musicbot.bot | In bot.py, line 220 in _setup_logging: Set logging level to INFO
+[0.5112698078155518] 2021-05-03 21:27:32,110 - DEBUG - musicbot.json_file | In json_file.py, line 8 in __init__: Init JSON obj with config/i18n/en.json
+[0.5334339141845703] 2021-05-03 21:27:32,132 - INFO - musicbot.bot | In bot.py, line 91 in __init__: Starting MusicBot 7804e29
+[3.0816998481750488] 2021-05-03 21:27:34,680 - DEBUG - musicbot.bot | In bot.py, line 839 in on_ready: Connection established, ready to go.
+[3.0818471908569336] 2021-05-03 21:27:34,681 - DEBUG - musicbot.bot | In bot.py, line 331 in _cache_app_info: Caching app info
+[3.2839419841766357] 2021-05-03 21:27:34,883 - DEBUG - musicbot.bot | In bot.py, line 665 in _scheck_ensure_env: Ensuring data folders exist
+[3.2843861579895020] 2021-05-03 21:27:34,883 - DEBUG - musicbot.bot | In bot.py, line 681 in _scheck_server_permissions: Checking server permissions
+[3.2844638824462891] 2021-05-03 21:27:34,883 - DEBUG - musicbot.bot | In bot.py, line 685 in _scheck_configs: Validating config
+[3.2845308780670166] 2021-05-03 21:27:34,883 - DEBUG - musicbot.config | In config.py, line 227 in async_validate: Validating options...
+[3.2845900058746338] 2021-05-03 21:27:34,883 - DEBUG - musicbot.config | In config.py, line 241 in async_validate: Acquired owner id via API
+[3.2846438884735107] 2021-05-03 21:27:34,883 - DEBUG - musicbot.bot | In bot.py, line 688 in _scheck_configs: Validating permissions config
+[3.2847077846527100] 2021-05-03 21:27:34,883 - DEBUG - musicbot.permissions | In permissions.py, line 94 in async_validate: Validating permissions...
+[3.2847869396209717] 2021-05-03 21:27:34,883 - DEBUG - musicbot.permissions | In permissions.py, line 98 in async_validate: Fixing automatic owner group
+[3.2848479747772217] 2021-05-03 21:27:34,884 - INFO - musicbot.bot | In bot.py, line 856 in on_ready: Connected: 838979956720664616/试做机1号#7171
+[3.2849831581115723] 2021-05-03 21:27:34,884 - WARNING - musicbot.bot | In bot.py, line 884 in on_ready: Owner could not be found on any guild (id: 287488743361871872)
+
+[3.2850780487060547] 2021-05-03 21:27:34,884 - INFO - musicbot.bot | In bot.py, line 886 in on_ready: Guild List:
+[3.2852749824523926] 2021-05-03 21:27:34,884 - INFO - musicbot.bot | In bot.py, line 889 in on_ready:  - XYZ
+[3.2853870391845703] 2021-05-03 21:27:34,884 - INFO - musicbot.bot | In bot.py, line 927 in on_ready: Not bound to any text channels
+[3.2854809761047363] 2021-05-03 21:27:34,884 - INFO - musicbot.bot | In bot.py, line 953 in on_ready: Not autojoining any voice channels
+[7.4588899612426758] 2021-05-03 21:27:39,058 - INFO - musicbot.bot | In bot.py, line 2575 in on_message: 287488743361871872/COl0rBee#8715: !summon
+[7.9169468879699707] 2021-05-03 21:27:39,516 - INFO - musicbot.bot | In bot.py, line 1813 in cmd_summon: Joining XYZ/WOWS
+[7.9185299873352051] 2021-05-03 21:27:39,517 - DEBUG - musicbot.bot | In bot.py, line 492 in on_player_stop: Running on_player_stop
+[13.9844980239868164] 2021-05-03 21:27:45,583 - INFO - musicbot.bot | In bot.py, line 2575 in on_message: 287488743361871872/COl0rBee#8715: !disconnect
