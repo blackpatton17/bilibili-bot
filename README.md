@@ -38,3 +38,6 @@ Forks and Pull Requests are welcome! Please make sure you tested the code before
 
 - [Support Discord server](https://discord.gg/bots)
 - [Project license](LICENSE)
+
+### For Ubuntu
+apt-get install libjpeg-dev zlib1g-dev ffmpeg
