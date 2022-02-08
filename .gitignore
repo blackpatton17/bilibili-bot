@@ -5,3 +5,6 @@ logs/
 logs/*
 data/
 data/*
+logs/musicbot.log
+audio_cache/
+audio_cache/*
