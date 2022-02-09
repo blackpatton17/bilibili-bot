@@ -1,40 +1,37 @@
-[30.003309250] 2022-02-07 17:48:04,735 - INFO - launcher: Starting sanity checks
-[31.000375748] 2022-02-07 17:48:04,736 - INFO - launcher: Checking for Python 3.5+
-[31.000375748] 2022-02-07 17:48:04,736 - INFO - launcher: Checking console encoding
-[31.000375748] 2022-02-07 17:48:04,736 - INFO - launcher: Setting console encoding to UTF-8
-[32.003402710] 2022-02-07 17:48:04,737 - INFO - launcher: Ensuring we're in the right environment
-[33.012866974] 2022-02-07 17:48:04,738 - INFO - launcher: Adding local bins/ folder to path
-[508.670806885] 2022-02-07 17:48:05,214 - INFO - launcher: Required checks passed.
-[509.643793106] 2022-02-07 17:48:05,215 - INFO - launcher: Optional checks passed.
-[509.643793106] 2022-02-07 17:48:05,215 - INFO - launcher: Moving old musicbot log
+[488.709449768] 2022-02-08 17:37:16,370 - INFO - launcher: Starting sanity checks
+[489.703178406] 2022-02-08 17:37:16,371 - INFO - launcher: Checking for Python 3.5+
+[489.703178406] 2022-02-08 17:37:16,371 - INFO - launcher: Checking console encoding
+[489.703178406] 2022-02-08 17:37:16,371 - INFO - launcher: Setting console encoding to UTF-8
+[490.701913834] 2022-02-08 17:37:16,372 - INFO - launcher: Enabling colors in pycharm pseudoconsole
+[490.701913834] 2022-02-08 17:37:16,372 - INFO - launcher: Ensuring we're in the right environment
+[492.701292038] 2022-02-08 17:37:16,374 - INFO - launcher: Adding local bins/ folder to path
+[1142.224788666] 2022-02-08 17:37:17,023 - INFO - launcher: Required checks passed.
+[1142.722129822] 2022-02-08 17:37:17,024 - INFO - launcher: Optional checks passed.
+[1143.228530884] 2022-02-08 17:37:17,024 - INFO - launcher: Moving old musicbot log
 
 ######################### PRE-RUN SANITY CHECKS PASSED #########################
 
-[1.2350430488586426] 2022-02-07 17:48:05,940 - WARNING - musicbot.config | In config.py, line 116 in run_checks: i18n file does not exist. Trying to fallback to config/i18n/en.json.
-[1.2350430488586426] 2022-02-07 17:48:05,940 - INFO - musicbot.config | In config.py, line 127 in run_checks: Using i18n: config/i18n/en.json
-[1.2360436916351318] 2022-02-07 17:48:05,941 - DEBUG - musicbot.bot | In bot.py, line 220 in _setup_logging: Set logging level to INFO
-[1.2381496429443359] 2022-02-07 17:48:05,943 - DEBUG - musicbot.json_file | In json_file.py, line 8 in __init__: Init JSON obj with config/i18n/en.json
-[1.2750451564788818] 2022-02-07 17:48:05,980 - INFO - musicbot.bot | In bot.py, line 91 in __init__: Starting MusicBot 766659b
-[1.4058940410614014] 2022-02-07 17:48:06,111 - DEBUG - musicbot.spotify | In spotify.py, line 74 in get_token: Created a new access token: {'access_token': 'BQAsfSQULrArk5lCqt3ew-nJBT5ubra4NvNnRQiS9tHL4G0DugQ985-cM07PHLiPK8DXZXQfXxE5OscbYAI', 'token_type': 'Bearer', 'expires_in': 3600, 'expires_at': 1644288486}
-[1.4069476127624512] 2022-02-07 17:48:06,112 - INFO - musicbot.bot | In bot.py, line 116 in __init__: Authenticated with Spotify successfully using client ID and secret.
-[3.9588422775268555] 2022-02-07 17:48:08,664 - DEBUG - musicbot.bot | In bot.py, line 839 in on_ready: Connection established, ready to go.
-[3.9588422775268555] 2022-02-07 17:48:08,664 - DEBUG - musicbot.bot | In bot.py, line 331 in _cache_app_info: Caching app info
-[4.0916929244995117] 2022-02-07 17:48:08,797 - DEBUG - musicbot.bot | In bot.py, line 665 in _scheck_ensure_env: Ensuring data folders exist
-[4.0926609039306641] 2022-02-07 17:48:08,798 - DEBUG - musicbot.bot | In bot.py, line 681 in _scheck_server_permissions: Checking server permissions
-[4.0926609039306641] 2022-02-07 17:48:08,798 - DEBUG - musicbot.bot | In bot.py, line 685 in _scheck_configs: Validating config
-[4.0926609039306641] 2022-02-07 17:48:08,798 - DEBUG - musicbot.config | In config.py, line 227 in async_validate: Validating options...
-[4.0926609039306641] 2022-02-07 17:48:08,798 - DEBUG - musicbot.config | In config.py, line 241 in async_validate: Acquired owner id via API
-[4.0926609039306641] 2022-02-07 17:48:08,798 - DEBUG - musicbot.bot | In bot.py, line 688 in _scheck_configs: Validating permissions config
-[4.0926609039306641] 2022-02-07 17:48:08,798 - DEBUG - musicbot.permissions | In permissions.py, line 94 in async_validate: Validating permissions...
-[4.0926609039306641] 2022-02-07 17:48:08,798 - DEBUG - musicbot.permissions | In permissions.py, line 98 in async_validate: Fixing automatic owner group
-[4.0926609039306641] 2022-02-07 17:48:08,798 - INFO - musicbot.bot | In bot.py, line 856 in on_ready: Connected: 940412327751200788/试做机1号·改#2297
-[4.1051726341247559] 2022-02-07 17:48:08,810 - WARNING - musicbot.bot | In bot.py, line 884 in on_ready: Owner could not be found on any guild (id: 287488743361871872)
+[4.0899145603179932] 2022-02-08 17:37:19,971 - WARNING - musicbot.config | In config.py, line 116 in run_checks: i18n file does not exist. Trying to fallback to config/i18n/en.json.
+[4.0910685062408447] 2022-02-08 17:37:19,972 - INFO - musicbot.config | In config.py, line 127 in run_checks: Using i18n: config/i18n/en.json
+[4.0989148616790771] 2022-02-08 17:37:19,980 - DEBUG - musicbot.bot | In bot.py, line 220 in _setup_logging: Set logging level to INFO
+[4.1102478504180908] 2022-02-08 17:37:19,991 - DEBUG - musicbot.json_file | In json_file.py, line 8 in __init__: Init JSON obj with config/i18n/en.json
+[4.2209401130676270] 2022-02-08 17:37:20,102 - INFO - musicbot.bot | In bot.py, line 91 in __init__: Starting MusicBot 6785398
+[4.4587926864624023] 2022-02-08 17:37:20,340 - DEBUG - musicbot.spotify | In spotify.py, line 74 in get_token: Created a new access token: {'access_token': 'BQBaatUnF_kBUelfll8UsJxZ6ye7sBu4ujSIFyxx6j5dXlv_hTw__tXwXKqvFOmgFKKj-2Y6fHPlbxAFGTY', 'token_type': 'Bearer', 'expires_in': 3600, 'expires_at': 1644374240}
+[4.4602274894714355] 2022-02-08 17:37:20,341 - INFO - musicbot.bot | In bot.py, line 116 in __init__: Authenticated with Spotify successfully using client ID and secret.
+[7.1240842342376709] 2022-02-08 17:37:23,005 - DEBUG - musicbot.bot | In bot.py, line 839 in on_ready: Connection established, ready to go.
+[7.1250874996185303] 2022-02-08 17:37:23,006 - DEBUG - musicbot.bot | In bot.py, line 331 in _cache_app_info: Caching app info
+[7.2348704338073730] 2022-02-08 17:37:23,116 - DEBUG - musicbot.bot | In bot.py, line 665 in _scheck_ensure_env: Ensuring data folders exist
+[7.2369129657745361] 2022-02-08 17:37:23,118 - DEBUG - musicbot.bot | In bot.py, line 681 in _scheck_server_permissions: Checking server permissions
+[7.2380836009979248] 2022-02-08 17:37:23,119 - DEBUG - musicbot.bot | In bot.py, line 685 in _scheck_configs: Validating config
+[7.2380836009979248] 2022-02-08 17:37:23,119 - DEBUG - musicbot.config | In config.py, line 227 in async_validate: Validating options...
+[7.2389159202575684] 2022-02-08 17:37:23,120 - DEBUG - musicbot.config | In config.py, line 241 in async_validate: Acquired owner id via API
+[7.2389159202575684] 2022-02-08 17:37:23,120 - DEBUG - musicbot.bot | In bot.py, line 688 in _scheck_configs: Validating permissions config
+[7.2399141788482666] 2022-02-08 17:37:23,121 - DEBUG - musicbot.permissions | In permissions.py, line 94 in async_validate: Validating permissions...
+[7.2399141788482666] 2022-02-08 17:37:23,121 - DEBUG - musicbot.permissions | In permissions.py, line 98 in async_validate: Fixing automatic owner group
+[7.2409148216247559] 2022-02-08 17:37:23,122 - INFO - musicbot.bot | In bot.py, line 856 in on_ready: Connected: 940412327751200788/试做机1号·改#2297
+[7.2409148216247559] 2022-02-08 17:37:23,122 - WARNING - musicbot.bot | In bot.py, line 884 in on_ready: Owner could not be found on any guild (id: 287488743361871872)
 
-[4.1061830520629883] 2022-02-07 17:48:08,811 - INFO - musicbot.bot | In bot.py, line 886 in on_ready: Guild List:
-[4.1061830520629883] 2022-02-07 17:48:08,811 - INFO - musicbot.bot | In bot.py, line 889 in on_ready:  - XYZ
-[4.1071848869323730] 2022-02-07 17:48:08,812 - INFO - musicbot.bot | In bot.py, line 927 in on_ready: Not bound to any text channels
-[4.1080837249755859] 2022-02-07 17:48:08,813 - INFO - musicbot.bot | In bot.py, line 953 in on_ready: Not autojoining any voice channels
-[71.1945548057556152] 2022-02-07 17:49:15,899 - INFO - musicbot.bot | In bot.py, line 2575 in on_message: 287488743361871872/COl0rBee#8715: **summon
-[71.6742486953735352] 2022-02-07 17:49:16,379 - INFO - musicbot.bot | In bot.py, line 1813 in cmd_summon: Joining XYZ/星际
-[71.6772572994232178] 2022-02-07 17:49:16,382 - DEBUG - musicbot.bot | In bot.py, line 492 in on_player_stop: Running on_player_stop
-[81.9105186462402344] 2022-02-07 17:49:26,615 - INFO - musicbot.bot | In bot.py, line 2575 in on_message: 287488743361871872/COl0rBee#8715: **disconnect
+[7.2419123649597168] 2022-02-08 17:37:23,123 - INFO - musicbot.bot | In bot.py, line 886 in on_ready: Guild List:
+[7.2430396080017090] 2022-02-08 17:37:23,124 - INFO - musicbot.bot | In bot.py, line 889 in on_ready:  - XYZ
+[7.2430396080017090] 2022-02-08 17:37:23,124 - INFO - musicbot.bot | In bot.py, line 927 in on_ready: Not bound to any text channels
+[7.2439138889312744] 2022-02-08 17:37:23,125 - INFO - musicbot.bot | In bot.py, line 953 in on_ready: Not autojoining any voice channels
