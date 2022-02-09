@@ -41,3 +41,6 @@ Forks and Pull Requests are welcome! Please make sure you tested the code before
 
 ### For Ubuntu
 apt-get install libjpeg-dev zlib1g-dev ffmpeg
+
+### TypeError: __new__() got an unexpected keyword argument 'deny_new'
+python3 -m pip install -U discord.py
