@@ -13,7 +13,7 @@ from . import bilibili
 from .utils import get_header
 from .constructs import Serializable
 from .lib.event_emitter import EventEmitter
-from .entry import BilibiliPlaylistEntry, YoutubeURLPlaylistEntry, StreamPlaylistEntry
+from .entry import BilibiliPlaylistEntry, YoutubeURLPlaylistEntry, StreamPlaylistEntry, NeteaseSongEntry
 from .exceptions import ExtractionError, WrongEntryTypeError
 
 log = logging.getLogger(__name__)
@@ -70,6 +70,24 @@ class Playlist(EventEmitter, Serializable):
             page,
             title,
             duration,
+            **meta
+        )
+        self._add_entry(entry)
+        return entry, len(self.entries)
+
+    async def add_netease_entry(self, mid, title, **meta):
+        """
+            Validates and adds a netease mid to be played. This does not start the download of the song.
+
+            Returns the entry & the position it is in the queue.
+
+            :param mid: The mid of netease song to be played
+            :param meta: Any additional metadata to add to the playlist entry.
+        """
+        entry = NeteaseSongEntry(
+            self,
+            mid,
+            title,
             **meta
         )
         self._add_entry(entry)

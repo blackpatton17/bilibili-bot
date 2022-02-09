@@ -24,7 +24,7 @@ from collections import defaultdict
 
 from discord.enums import ChannelType
 
-from . import exceptions
+from . import exceptions, netease
 from . import downloader
 from . import bilibili
 
@@ -1180,7 +1180,15 @@ class MusicBot(discord.Client):
         if song_url.lower().startswith('av') or song_url.lower().startswith('bv'):
             bilibili_vid = song_url
 
-        # Make sure forward slashes work properly in search queries
+        netease_mid = None
+        if "music.163" in song_url.lower():
+            for str in song_url.lower().split("music.163")[1].split('?')[1].split("&"):
+                if 'id=' in str:
+                    if str.index('id=') == 0:
+                        netease_mid = re.sub("[^0-9]", "", str[3:])
+
+
+            # Make sure forward slashes work properly in search queries
         linksRegex = r'((http(s)*:\/\/|www\.)(([a-z]|[A-Z]|[0-9]|[\/.]|[~])*))'
         matchUrl = re.match(linksRegex, song_url)
         song_url = song_url.replace('/', '%2F') if matchUrl is None else song_url
@@ -1261,6 +1269,17 @@ class MusicBot(discord.Client):
             data = await bilibili.get_video_metadata(bilibili_vid)
 
             entry, position = await player.playlist.add_bilibili_entry(data['bvid'], page, data['title'], data['duration'], channel=channel, author=author)
+            reply_text = self.str.get('cmd-play-song-reply', "Enqueued `%s` to be played. Position in queue: %s")
+            reply_text %= (entry, position)
+            return Response(reply_text)
+
+        # add netease song(single)
+        # TODO: support play_list
+        if netease_mid:
+            data = await netease.get_music_metadata(netease_mid)
+
+            entry, position = await player.playlist.add_netease_entry(data['id'], data['name'],
+                                                                      channel=channel, author=author)
             reply_text = self.str.get('cmd-play-song-reply', "Enqueued `%s` to be played. Position in queue: %s")
             reply_text %= (entry, position)
             return Response(reply_text)

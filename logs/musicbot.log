@@ -1,37 +1,97 @@
-[488.709449768] 2022-02-08 17:37:16,370 - INFO - launcher: Starting sanity checks
-[489.703178406] 2022-02-08 17:37:16,371 - INFO - launcher: Checking for Python 3.5+
-[489.703178406] 2022-02-08 17:37:16,371 - INFO - launcher: Checking console encoding
-[489.703178406] 2022-02-08 17:37:16,371 - INFO - launcher: Setting console encoding to UTF-8
-[490.701913834] 2022-02-08 17:37:16,372 - INFO - launcher: Enabling colors in pycharm pseudoconsole
-[490.701913834] 2022-02-08 17:37:16,372 - INFO - launcher: Ensuring we're in the right environment
-[492.701292038] 2022-02-08 17:37:16,374 - INFO - launcher: Adding local bins/ folder to path
-[1142.224788666] 2022-02-08 17:37:17,023 - INFO - launcher: Required checks passed.
-[1142.722129822] 2022-02-08 17:37:17,024 - INFO - launcher: Optional checks passed.
-[1143.228530884] 2022-02-08 17:37:17,024 - INFO - launcher: Moving old musicbot log
+[118.364334106] 2022-02-08 18:55:31,774 - INFO - launcher: Starting sanity checks
+[119.363784790] 2022-02-08 18:55:31,775 - INFO - launcher: Checking for Python 3.5+
+[120.537281036] 2022-02-08 18:55:31,776 - INFO - launcher: Checking console encoding
+[121.363162994] 2022-02-08 18:55:31,777 - INFO - launcher: Setting console encoding to UTF-8
+[121.363162994] 2022-02-08 18:55:31,777 - INFO - launcher: Enabling colors in pycharm pseudoconsole
+[122.362613678] 2022-02-08 18:55:31,778 - INFO - launcher: Ensuring we're in the right environment
+[127.531290054] 2022-02-08 18:55:31,783 - INFO - launcher: Adding local bins/ folder to path
+[1367.408752441] 2022-02-08 18:55:33,023 - INFO - launcher: Required checks passed.
+[1367.408752441] 2022-02-08 18:55:33,023 - INFO - launcher: Optional checks passed.
+[1367.408752441] 2022-02-08 18:55:33,023 - INFO - launcher: Moving old musicbot log
 
 ######################### PRE-RUN SANITY CHECKS PASSED #########################
 
-[4.0899145603179932] 2022-02-08 17:37:19,971 - WARNING - musicbot.config | In config.py, line 116 in run_checks: i18n file does not exist. Trying to fallback to config/i18n/en.json.
-[4.0910685062408447] 2022-02-08 17:37:19,972 - INFO - musicbot.config | In config.py, line 127 in run_checks: Using i18n: config/i18n/en.json
-[4.0989148616790771] 2022-02-08 17:37:19,980 - DEBUG - musicbot.bot | In bot.py, line 220 in _setup_logging: Set logging level to INFO
-[4.1102478504180908] 2022-02-08 17:37:19,991 - DEBUG - musicbot.json_file | In json_file.py, line 8 in __init__: Init JSON obj with config/i18n/en.json
-[4.2209401130676270] 2022-02-08 17:37:20,102 - INFO - musicbot.bot | In bot.py, line 91 in __init__: Starting MusicBot 6785398
-[4.4587926864624023] 2022-02-08 17:37:20,340 - DEBUG - musicbot.spotify | In spotify.py, line 74 in get_token: Created a new access token: {'access_token': 'BQBaatUnF_kBUelfll8UsJxZ6ye7sBu4ujSIFyxx6j5dXlv_hTw__tXwXKqvFOmgFKKj-2Y6fHPlbxAFGTY', 'token_type': 'Bearer', 'expires_in': 3600, 'expires_at': 1644374240}
-[4.4602274894714355] 2022-02-08 17:37:20,341 - INFO - musicbot.bot | In bot.py, line 116 in __init__: Authenticated with Spotify successfully using client ID and secret.
-[7.1240842342376709] 2022-02-08 17:37:23,005 - DEBUG - musicbot.bot | In bot.py, line 839 in on_ready: Connection established, ready to go.
-[7.1250874996185303] 2022-02-08 17:37:23,006 - DEBUG - musicbot.bot | In bot.py, line 331 in _cache_app_info: Caching app info
-[7.2348704338073730] 2022-02-08 17:37:23,116 - DEBUG - musicbot.bot | In bot.py, line 665 in _scheck_ensure_env: Ensuring data folders exist
-[7.2369129657745361] 2022-02-08 17:37:23,118 - DEBUG - musicbot.bot | In bot.py, line 681 in _scheck_server_permissions: Checking server permissions
-[7.2380836009979248] 2022-02-08 17:37:23,119 - DEBUG - musicbot.bot | In bot.py, line 685 in _scheck_configs: Validating config
-[7.2380836009979248] 2022-02-08 17:37:23,119 - DEBUG - musicbot.config | In config.py, line 227 in async_validate: Validating options...
-[7.2389159202575684] 2022-02-08 17:37:23,120 - DEBUG - musicbot.config | In config.py, line 241 in async_validate: Acquired owner id via API
-[7.2389159202575684] 2022-02-08 17:37:23,120 - DEBUG - musicbot.bot | In bot.py, line 688 in _scheck_configs: Validating permissions config
-[7.2399141788482666] 2022-02-08 17:37:23,121 - DEBUG - musicbot.permissions | In permissions.py, line 94 in async_validate: Validating permissions...
-[7.2399141788482666] 2022-02-08 17:37:23,121 - DEBUG - musicbot.permissions | In permissions.py, line 98 in async_validate: Fixing automatic owner group
-[7.2409148216247559] 2022-02-08 17:37:23,122 - INFO - musicbot.bot | In bot.py, line 856 in on_ready: Connected: 940412327751200788/试做机1号·改#2297
-[7.2409148216247559] 2022-02-08 17:37:23,122 - WARNING - musicbot.bot | In bot.py, line 884 in on_ready: Owner could not be found on any guild (id: 287488743361871872)
+[2.7814226150512695] 2022-02-08 18:55:34,437 - WARNING - musicbot.config | In config.py, line 116 in run_checks: i18n file does not exist. Trying to fallback to config/i18n/en.json.
+[2.7822575569152832] 2022-02-08 18:55:34,438 - INFO - musicbot.config | In config.py, line 127 in run_checks: Using i18n: config/i18n/en.json
+[2.7842972278594971] 2022-02-08 18:55:34,440 - DEBUG - musicbot.bot | In bot.py, line 220 in _setup_logging: Set logging level to INFO
+[2.7872998714447021] 2022-02-08 18:55:34,443 - DEBUG - musicbot.json_file | In json_file.py, line 8 in __init__: Init JSON obj with config/i18n/en.json
+[2.8498826026916504] 2022-02-08 18:55:34,505 - INFO - musicbot.bot | In bot.py, line 91 in __init__: Starting MusicBot 037bc25
+[3.0021169185638428] 2022-02-08 18:55:34,658 - DEBUG - musicbot.spotify | In spotify.py, line 74 in get_token: Created a new access token: {'access_token': 'BQBmU4TMcNQcYiS93Y8AHzjMcjL5e-5szzncE4mIcA2ieodGvT46qkAHPo48boa7N1WYI_r0JjvsFzfX3ks', 'token_type': 'Bearer', 'expires_in': 3600, 'expires_at': 1644378934}
+[3.0028829574584961] 2022-02-08 18:55:34,658 - INFO - musicbot.bot | In bot.py, line 116 in __init__: Authenticated with Spotify successfully using client ID and secret.
+[6.4133443832397461] 2022-02-08 18:55:38,069 - DEBUG - musicbot.bot | In bot.py, line 839 in on_ready: Connection established, ready to go.
+[6.4145576953887939] 2022-02-08 18:55:38,070 - DEBUG - musicbot.bot | In bot.py, line 331 in _cache_app_info: Caching app info
+[6.6360716819763184] 2022-02-08 18:55:38,292 - DEBUG - musicbot.bot | In bot.py, line 665 in _scheck_ensure_env: Ensuring data folders exist
+[6.6391959190368652] 2022-02-08 18:55:38,295 - DEBUG - musicbot.bot | In bot.py, line 681 in _scheck_server_permissions: Checking server permissions
+[6.6400866508483887] 2022-02-08 18:55:38,296 - DEBUG - musicbot.bot | In bot.py, line 685 in _scheck_configs: Validating config
+[6.6400866508483887] 2022-02-08 18:55:38,296 - DEBUG - musicbot.config | In config.py, line 227 in async_validate: Validating options...
+[6.6400866508483887] 2022-02-08 18:55:38,296 - DEBUG - musicbot.config | In config.py, line 241 in async_validate: Acquired owner id via API
+[6.6400866508483887] 2022-02-08 18:55:38,296 - DEBUG - musicbot.bot | In bot.py, line 688 in _scheck_configs: Validating permissions config
+[6.6412839889526367] 2022-02-08 18:55:38,297 - DEBUG - musicbot.permissions | In permissions.py, line 94 in async_validate: Validating permissions...
+[6.6412839889526367] 2022-02-08 18:55:38,297 - DEBUG - musicbot.permissions | In permissions.py, line 98 in async_validate: Fixing automatic owner group
+[6.6412839889526367] 2022-02-08 18:55:38,297 - INFO - musicbot.bot | In bot.py, line 856 in on_ready: Connected: 940412327751200788/试做机1号·改#2297
+[6.6420829296112061] 2022-02-08 18:55:38,298 - WARNING - musicbot.bot | In bot.py, line 884 in on_ready: Owner could not be found on any guild (id: 287488743361871872)
 
-[7.2419123649597168] 2022-02-08 17:37:23,123 - INFO - musicbot.bot | In bot.py, line 886 in on_ready: Guild List:
-[7.2430396080017090] 2022-02-08 17:37:23,124 - INFO - musicbot.bot | In bot.py, line 889 in on_ready:  - XYZ
-[7.2430396080017090] 2022-02-08 17:37:23,124 - INFO - musicbot.bot | In bot.py, line 927 in on_ready: Not bound to any text channels
-[7.2439138889312744] 2022-02-08 17:37:23,125 - INFO - musicbot.bot | In bot.py, line 953 in on_ready: Not autojoining any voice channels
+[6.6432828903198242] 2022-02-08 18:55:38,299 - INFO - musicbot.bot | In bot.py, line 886 in on_ready: Guild List:
+[6.6432828903198242] 2022-02-08 18:55:38,299 - INFO - musicbot.bot | In bot.py, line 889 in on_ready:  - XYZ
+[6.6440908908843994] 2022-02-08 18:55:38,300 - INFO - musicbot.bot | In bot.py, line 927 in on_ready: Not bound to any text channels
+[6.6450841426849365] 2022-02-08 18:55:38,301 - INFO - musicbot.bot | In bot.py, line 953 in on_ready: Not autojoining any voice channels
+[6.6462430953979492] 2022-02-08 18:55:38,302 - INFO - musicbot.bot | In bot.py, line 261 in _join_startup_channels: Found resumable voice channel XYZ/虚拟ode
+[6.6462430953979492] 2022-02-08 18:55:38,302 - INFO - musicbot.bot | In bot.py, line 276 in _join_startup_channels: Attempting to join XYZ/虚拟ode
+[7.2363557815551758] 2022-02-08 18:55:38,892 - DEBUG - musicbot.bot | In bot.py, line 628 in deserialize_queue: Deserializing queue for 443595947268898836
+[7.4897072315216064] 2022-02-08 18:55:39,145 - DEBUG - musicbot.bot | In bot.py, line 390 in get_player: Created player via deserialization for guild 443595947268898836 with 0 entries
+[7.4900102615356445] 2022-02-08 18:55:39,146 - INFO - musicbot.bot | In bot.py, line 292 in _join_startup_channels: Joined XYZ/虚拟ode
+[7.4916696548461914] 2022-02-08 18:55:39,147 - DEBUG - musicbot.bot | In bot.py, line 492 in on_player_stop: Running on_player_stop
+[12.8761317729949951] 2022-02-08 18:55:44,532 - INFO - musicbot.bot | In bot.py, line 2594 in on_message: 287488743361871872/COl0rBee#8715: **play https://music.163.com/#/song?id=27853410
+[14.1902837753295898] 2022-02-08 18:55:45,846 - DEBUG - musicbot.entry | In entry.py, line 66 in get_ready_future: Created future for None
+[14.1940491199493408] 2022-02-08 18:55:45,850 - DEBUG - musicbot.bot | In bot.py, line 519 in on_player_entry_added: Running on_player_entry_added
+[14.1950626373291016] 2022-02-08 18:55:45,851 - DEBUG - musicbot.bot | In bot.py, line 604 in serialize_queue: Serializing queue for 443595947268898836
+[14.2182803153991699] 2022-02-08 18:55:45,874 - INFO - musicbot.netease | In netease.py, line 73 in download: {'name': '妄想税', 'id': 27853410, 'pst': 0, 't': 0, 'ar': [{'id': 14001, 'name': 'DECO*27', 'tns': [], 'alias': []}, {'id': 159692, 'name': '初音ミク', 'tns': [], 'alias': []}], 'alia': [], 'pop': 100, 'st': 0, 'rt': '', 'fee': 8, 'v': 23, 'crbt': None, 'cf': '', 'al': {'id': 2685203, 'name': '妄想税', 'picUrl': 'https://p2.music.126.net/EDcLXmRye4yo5AKac6xjLQ==/5699868278502543.jpg', 'tns': [], 'pic': 5699868278502543}, 'dt': 216546, 'h': {'br': 320000, 'fid': 0, 'size': 8664338, 'vd': -4}, 'm': {'br': 192000, 'fid': 0, 'size': 5198620, 'vd': -3}, 'l': {'br': 128000, 'fid': 0, 'size': 3465761, 'vd': -3}, 'a': None, 'cd': '1', 'no': 1, 'rtUrl': None, 'ftype': 0, 'rtUrls': [], 'djId': 0, 'copyright': 2, 's_id': 0, 'mark': 9007199255003136, 'originCoverType': 1, 'originSongSimpleData': None, 'tagPicList': None, 'resourceState': True, 'version': 23, 'songJumpInfo': None, 'entertainmentTags': None, 'single': 0, 'noCopyrightRcmd': None, 'rtype': 0, 'rurl': None, 'mst': 9, 'cp': 1400822, 'mv': 0, 'publishTime': 1356969600004}
+[14.2192816734313965] 2022-02-08 18:55:45,875 - INFO - musicbot.netease | In netease.py, line 87 in download: [下载音乐的mid]:27853410
+[14.2202818393707275] 2022-02-08 18:55:45,876 - INFO - musicbot.netease | In netease.py, line 88 in download: [下载音乐的标题]:妄想税
+[14.2214975357055664] 2022-02-08 18:55:45,877 - INFO - musicbot.netease | In netease.py, line 89 in download: [下载音乐至目录]:C:\Users\black\github\bilibili-bot\audio_cache
+[15.3133599758148193] 2022-02-08 18:55:46,969 - INFO - musicbot.netease | In netease.py, line 93 in download: 27853410_妄想税
+[15.3150522708892822] 2022-02-08 18:55:46,971 - INFO - musicbot.netease | In netease.py, line 95 in download: 下载总耗时1.12秒,约0.02分钟
+[16.1908891201019287] 2022-02-08 18:55:47,846 - DEBUG - musicbot.entry | In entry.py, line 66 in get_ready_future: Created future for C:\Users\black\github\bilibili-bot\audio_cache\27853410_妄想税.mp3
+[16.1908891201019287] 2022-02-08 18:55:47,846 - FFMPEG - musicbot.player | In player.py, line 292 in _play: Creating player with options: -nostdin -vn C:\Users\black\github\bilibili-bot\audio_cache\27853410_妄想税.mp3
+[16.1998906135559082] 2022-02-08 18:55:47,855 - DEBUG - musicbot.player | In player.py, line 305 in _play: Playing <musicbot.player.SourcePlaybackCounter object at 0x000001789EC8C088> using <discord.voice_client.VoiceClient object at 0x000001789EB2C808>
+[16.2019689083099365] 2022-02-08 18:55:47,858 - DEBUG - musicbot.bot | In bot.py, line 425 in on_player_play: Running on_player_play
+[16.2029814720153809] 2022-02-08 18:55:47,859 - DEBUG - musicbot.bot | In bot.py, line 604 in serialize_queue: Serializing queue for 443595947268898836
+[26.5419790744781494] 2022-02-08 18:55:58,198 - INFO - musicbot.bot | In bot.py, line 2594 in on_message: 287488743361871872/COl0rBee#8715: **skip
+[26.6986503601074219] 2022-02-08 18:55:58,354 - DEBUG - musicbot.bot | In bot.py, line 496 in on_player_finished_playing: Running on_player_finished_playing
+[26.9015653133392334] 2022-02-08 18:55:58,557 - DEBUG - musicbot.bot | In bot.py, line 604 in serialize_queue: Serializing queue for 443595947268898836
+[26.9045655727386475] 2022-02-08 18:55:58,560 - DEBUG - musicbot.bot | In bot.py, line 492 in on_player_stop: Running on_player_stop
+[44.7156374454498291] 2022-02-08 18:56:16,371 - INFO - musicbot.bot | In bot.py, line 2594 in on_message: 287488743361871872/COl0rBee#8715: **clean
+[47.0753729343414307] 2022-02-08 18:56:18,731 - DEBUG - musicbot.bot | In bot.py, line 745 in safe_delete_message: Cannot delete message "", message not found
+[81.0701663494110107] 2022-02-08 18:56:52,726 - INFO - musicbot.bot | In bot.py, line 2594 in on_message: 287488743361871872/COl0rBee#8715: **play https://music.163.com/#/song?id=500684228
+[81.9885158538818359] 2022-02-08 18:56:53,644 - DEBUG - musicbot.entry | In entry.py, line 66 in get_ready_future: Created future for None
+[81.9925572872161865] 2022-02-08 18:56:53,648 - DEBUG - musicbot.bot | In bot.py, line 519 in on_player_entry_added: Running on_player_entry_added
+[81.9935588836669922] 2022-02-08 18:56:53,649 - DEBUG - musicbot.bot | In bot.py, line 604 in serialize_queue: Serializing queue for 443595947268898836
+[82.0155506134033203] 2022-02-08 18:56:53,671 - INFO - musicbot.netease | In netease.py, line 73 in download: {'name': 'Discovery', 'id': 500684228, 'pst': 0, 't': 0, 'ar': [{'id': 1192533, 'name': 'Electro-Light', 'tns': [], 'alias': []}], 'alia': [], 'pop': 65, 'st': 0, 'rt': None, 'fee': 8, 'v': 15, 'crbt': None, 'cf': '', 'al': {'id': 36030053, 'name': 'Discovery', 'picUrl': 'https://p1.music.126.net/RFobm2caRIklPvv-nKK2OQ==/109951164458384435.jpg', 'tns': [], 'pic_str': '109951164458384435', 'pic': 109951164458384430}, 'dt': 181956, 'h': {'br': 320000, 'fid': 0, 'size': 7280893, 'vd': -62762}, 'm': None, 'l': {'br': 128000, 'fid': 0, 'size': 2912383, 'vd': -59762}, 'a': None, 'cd': '01', 'no': 1, 'rtUrl': None, 'ftype': 0, 'rtUrls': [], 'djId': 0, 'copyright': 0, 's_id': 0, 'mark': 401408, 'originCoverType': 0, 'originSongSimpleData': None, 'tagPicList': None, 'resourceState': True, 'version': 15, 'songJumpInfo': None, 'entertainmentTags': None, 'single': 0, 'noCopyrightRcmd': None, 'rtype': 0, 'rurl': None, 'mst': 9, 'cp': 1416074, 'mv': 0, 'publishTime': 1502208000007}
+[82.0172154903411865] 2022-02-08 18:56:53,673 - INFO - musicbot.netease | In netease.py, line 87 in download: [下载音乐的mid]:500684228
+[82.0175139904022217] 2022-02-08 18:56:53,673 - INFO - musicbot.netease | In netease.py, line 88 in download: [下载音乐的标题]:Discovery
+[82.0185923576354980] 2022-02-08 18:56:53,674 - INFO - musicbot.netease | In netease.py, line 89 in download: [下载音乐至目录]:C:\Users\black\github\bilibili-bot\audio_cache
+[83.9800901412963867] 2022-02-08 18:56:55,636 - DEBUG - musicbot.entry | In entry.py, line 66 in get_ready_future: Created future for None
+[83.9963669776916504] 2022-02-08 18:56:55,652 - INFO - musicbot.netease | In netease.py, line 73 in download: {'name': 'Discovery', 'id': 500684228, 'pst': 0, 't': 0, 'ar': [{'id': 1192533, 'name': 'Electro-Light', 'tns': [], 'alias': []}], 'alia': [], 'pop': 65, 'st': 0, 'rt': None, 'fee': 8, 'v': 15, 'crbt': None, 'cf': '', 'al': {'id': 36030053, 'name': 'Discovery', 'picUrl': 'https://p1.music.126.net/RFobm2caRIklPvv-nKK2OQ==/109951164458384435.jpg', 'tns': [], 'pic_str': '109951164458384435', 'pic': 109951164458384430}, 'dt': 181956, 'h': {'br': 320000, 'fid': 0, 'size': 7280893, 'vd': -62762}, 'm': None, 'l': {'br': 128000, 'fid': 0, 'size': 2912383, 'vd': -59762}, 'a': None, 'cd': '01', 'no': 1, 'rtUrl': None, 'ftype': 0, 'rtUrls': [], 'djId': 0, 'copyright': 0, 's_id': 0, 'mark': 401408, 'originCoverType': 0, 'originSongSimpleData': None, 'tagPicList': None, 'resourceState': True, 'version': 15, 'songJumpInfo': None, 'entertainmentTags': None, 'single': 0, 'noCopyrightRcmd': None, 'rtype': 0, 'rurl': None, 'mst': 9, 'cp': 1416074, 'mv': 0, 'publishTime': 1502208000007}
+[83.9974067211151123] 2022-02-08 18:56:55,653 - INFO - musicbot.netease | In netease.py, line 87 in download: [下载音乐的mid]:500684228
+[83.9985885620117188] 2022-02-08 18:56:55,654 - INFO - musicbot.netease | In netease.py, line 88 in download: [下载音乐的标题]:Discovery
+[83.9985885620117188] 2022-02-08 18:56:55,654 - INFO - musicbot.netease | In netease.py, line 89 in download: [下载音乐至目录]:C:\Users\black\github\bilibili-bot\audio_cache
+[84.0163755416870117] 2022-02-08 18:56:55,672 - WARNING - musicbot.player | In player.py, line 273 in _play: Failed to get entry, retrying
+Traceback (most recent call last):
+  File "C:\Users\black\github\bilibili-bot\musicbot\player.py", line 271, in _play
+    entry = await self.playlist.get_next_entry()
+  File "C:\Users\black\github\bilibili-bot\musicbot\playlist.py", line 372, in get_next_entry
+    return await entry.get_ready_future()
+  File "C:\Users\black\github\bilibili-bot\musicbot\entry.py", line 297, in _download
+    filename = await netease.download(self.mid, self.download_folder)
+  File "C:\Users\black\github\bilibili-bot\musicbot\netease.py", line 90, in download
+    await _down_music(filename, start_url)
+  File "C:\Users\black\github\bilibili-bot\musicbot\netease.py", line 52, in _down_music
+    async with session.get(download_url) as resp:
+  File "C:\Users\black\github\bilibili-bot\venv\lib\site-packages\aiohttp\client.py", line 1117, in __aenter__
+    self._resp = await self._coro
+  File "C:\Users\black\github\bilibili-bot\venv\lib\site-packages\aiohttp\client.py", line 404, in _request
+    url = URL(str_or_url)
+  File "C:\Users\black\github\bilibili-bot\venv\lib\site-packages\yarl\_url.py", line 152, in __new__
+    raise TypeError("Constructor parameter should be str")
+TypeError: Constructor parameter should be str
+[84.1203105449676514] 2022-02-08 18:56:55,776 - DEBUG - musicbot.bot | In bot.py, line 492 in on_player_stop: Running on_player_stop

@@ -47,6 +47,9 @@ class SpotifyError(MusicbotException):
 class BilibiliError(MusicbotException):
     pass
 
+class NeteaseError(MusicbotException):
+    pass
+
 # HTTP requests error
 class HTTPError(MusicbotException):
     @property

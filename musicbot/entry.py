@@ -6,7 +6,7 @@ import re
 import sys
 
 from enum import Enum
-from . import bilibili
+from . import bilibili, netease
 from .constructs import Serializable
 from .exceptions import ExtractionError
 from .utils import get_header, md5sum
@@ -169,6 +169,132 @@ class BilibiliPlaylistEntry(BasePlaylistEntry):
                 os.makedirs(self.download_folder)
 
             filename = await bilibili.download(self.bvid, self.playlist.bot.config.bilibili_quality, self.download_folder, self.page)
+
+            self.filename = os.path.join(self.download_folder, filename)
+            # Trigger ready callbacks.
+            self._for_each_future(lambda future: future.set_result(self))
+
+        except Exception as e:
+            traceback.print_exc()
+            self._for_each_future(lambda future: future.set_exception(e))
+
+        finally:
+            self._is_downloading = False
+
+    async def run_command(self, cmd):
+        p = await asyncio.create_subprocess_shell(cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
+        log.debug('Starting asyncio subprocess ({0}) with command: {1}'.format(p, cmd))
+        stdout, stderr = await p.communicate()
+        return stdout + stderr
+
+    def get(self, program):
+        def is_exe(fpath):
+            found = os.path.isfile(fpath) and os.access(fpath, os.X_OK)
+            if not found and sys.platform == 'win32':
+                fpath = fpath + ".exe"
+                found = os.path.isfile(fpath) and os.access(fpath, os.X_OK)
+            return found
+
+        fpath, __ = os.path.split(program)
+        if fpath:
+            if is_exe(program):
+                return program
+        else:
+            for path in os.environ["PATH"].split(os.pathsep):
+                path = path.strip('"')
+                exe_file = os.path.join(path, program)
+                if is_exe(exe_file):
+                    return exe_file
+
+        return None
+
+    async def get_mean_volume(self, input_file):
+        log.debug('Calculating mean volume of {0}'.format(input_file))
+        cmd = '"' + self.get('ffmpeg') + '" -i "' + input_file + '" -af "volumedetect" -f null /dev/null'
+        output = await self.run_command(cmd)
+        output = output.decode("utf-8")
+        # print('----', output)
+        mean_volume_matches = re.findall(r"mean_volume: ([\-\d\.]+) dB", output)
+        if (mean_volume_matches):
+            mean_volume = float(mean_volume_matches[0])
+        else:
+            mean_volume = float(0)
+
+        max_volume_matches = re.findall(r"max_volume: ([\-\d\.]+) dB", output)
+        if (max_volume_matches):
+            max_volume = float(max_volume_matches[0])
+        else:
+            max_volume = float(0)
+
+        log.debug('Calculated mean volume as {0}'.format(mean_volume))
+        return mean_volume, max_volume
+
+class NeteaseSongEntry(BasePlaylistEntry):
+    def __init__(self, playlist, mid, title,  **meta):
+        super().__init__()
+
+        self.playlist = playlist
+        self.mid = mid
+        self.title = title
+        self.meta = meta
+        self.aoptions = '-vn'
+        self.download_folder = self.playlist.downloader.download_folder
+
+    def __json__(self):
+        return self._enclose_json({
+            'version': 1,
+            'mid': self.mid,
+            'title': self.title,
+            'downloaded': self.is_downloaded,
+            'filename': self.filename,
+            'full_filename': os.path.abspath(self.filename) if self.filename else self.filename,
+            'meta': {
+                name: {
+                    'type': obj.__class__.__name__,
+                    'id': obj.id,
+                    'name': obj.name
+                } for name, obj in self.meta.items() if obj
+            },
+            'aoptions': self.aoptions
+        })
+
+    def __str__(self):
+        return "{}> {}".format(self.mid, self.title)
+
+    @classmethod
+    def _deserialize(cls, data, playlist=None):
+        assert playlist is not None, cls._bad('playlist')
+
+        try:
+            mid = data['mid']
+            title = data['title']
+            downloaded = data['downloaded']
+            filename = data['filename'] if downloaded else None
+            meta = {}
+
+            entry = cls(playlist, mid, title, **meta)
+            entry.filename = filename
+
+            return entry
+        except Exception as e:
+            log.error("Could not load {}".format(cls.__name__), exc_info=e)
+
+    @property
+    def url(self):
+        return "https://music.163.com/#/song?id=" + self.mid
+
+    # noinspection PyTypeChecker
+    async def _download(self):
+        if self._is_downloading:
+            return
+
+        self._is_downloading = True
+        try:
+            # Ensure the folder that we're going to move into exists.
+            if not os.path.exists(self.download_folder):
+                os.makedirs(self.download_folder)
+
+            filename = await netease.download(self.mid, self.download_folder)
 
             self.filename = os.path.join(self.download_folder, filename)
             # Trigger ready callbacks.
