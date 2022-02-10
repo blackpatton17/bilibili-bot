@@ -230,12 +230,13 @@ class BilibiliPlaylistEntry(BasePlaylistEntry):
         return mean_volume, max_volume
 
 class NeteaseSongEntry(BasePlaylistEntry):
-    def __init__(self, playlist, mid, title,  **meta):
+    def __init__(self, playlist, mid, title, duration, **meta):
         super().__init__()
 
         self.playlist = playlist
         self.mid = mid
         self.title = title
+        self.duration = duration
         self.meta = meta
         self.aoptions = '-vn'
         self.download_folder = self.playlist.downloader.download_folder
@@ -245,6 +246,7 @@ class NeteaseSongEntry(BasePlaylistEntry):
             'version': 1,
             'mid': self.mid,
             'title': self.title,
+            'duration': self.duration,
             'downloaded': self.is_downloaded,
             'filename': self.filename,
             'full_filename': os.path.abspath(self.filename) if self.filename else self.filename,

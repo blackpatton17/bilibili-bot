@@ -75,7 +75,7 @@ class Playlist(EventEmitter, Serializable):
         self._add_entry(entry)
         return entry, len(self.entries)
 
-    async def add_netease_entry(self, mid, title, **meta):
+    async def add_netease_entry(self, mid, title, duration, **meta):
         """
             Validates and adds a netease mid to be played. This does not start the download of the song.
 
@@ -88,6 +88,7 @@ class Playlist(EventEmitter, Serializable):
             self,
             mid,
             title,
+            duration,
             **meta
         )
         self._add_entry(entry)

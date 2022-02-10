@@ -1278,14 +1278,13 @@ class MusicBot(discord.Client):
         if netease_mid:
             data = await netease.get_music_metadata(netease_mid)
 
-            entry, position = await player.playlist.add_netease_entry(data['id'], data['name'],
-                                                                      channel=channel, author=author)
+            entry, position = await player.playlist.add_netease_entry(data['id'], data['name'], data['dt']/1000, channel=channel, author=author)
             reply_text = self.str.get('cmd-play-song-reply', "Enqueued `%s` to be played. Position in queue: %s")
             reply_text %= (entry, position)
             return Response(reply_text)
 
         # This lock prevent spamming play command to add entries that exceeds time limit/ maximum song limit
-        async with self.aiolocks[_func_() + ':' + str(author.id)]:
+        async with self.aiolocks[_func_() + f':{author.id}']:
             if permissions.max_songs and player.playlist.count_for_user(author) >= permissions.max_songs:
                 raise exceptions.PermissionsError(
                     self.str.get('cmd-play-limit', "You have reached your enqueued song limit ({0})").format(permissions.max_songs), expire_in=30
